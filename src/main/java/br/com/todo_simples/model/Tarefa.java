@@ -1,5 +1,6 @@
 package br.com.todo_simples.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
@@ -44,6 +45,7 @@ public class Tarefa {
     private Long id;
 
     @Column(nullable = false) // Garante que a coluna não pode ser nula
+    @JsonProperty("descricao")
     private String descricao;
 
     private boolean concluida;
